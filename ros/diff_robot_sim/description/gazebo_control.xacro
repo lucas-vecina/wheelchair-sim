@@ -7,9 +7,14 @@
             <!-- Wheel Information -->
             <left_joint>left_wheel_joint</left_joint>
             <right_joint>right_wheel_joint</right_joint>
-            <wheel_separation>0.35</wheel_separation>
-            <wheel_diameter>0.1</wheel_diameter>
+            <wheel_separation>0.7</wheel_separation>
+            <wheel_diameter>0.6</wheel_diameter>
 
+            <ros>
+                <remapping>cmd_vel:=cmd_vel_sim</remapping>
+                
+                <remapping>odom:=odom</remapping>
+            </ros>
 
             <!-- Limits -->
             <max_wheel_torque>200</max_wheel_torque>
