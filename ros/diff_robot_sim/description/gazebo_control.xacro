@@ -32,5 +32,36 @@
         </plugin>
     </gazebo>
 
+<gazebo reference="right_wheel_joint">
+    <provideFeedback>true</provideFeedback>
+</gazebo>
+
+<gazebo>
+    <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+        <updateRate>50.0</updateRate>
+        <topicName>ft_sensor_topic</topicName>
+        <joint_name>right_wheel_joint</joint_name>
+        <ros>
+            <namespace>/right_wheel</namespace>
+            <remapping>wrench:=torque_feedback</remapping>
+        </ros>
+    </plugin>
+</gazebo>
+
+<gazebo reference="left_wheel_joint">
+    <provideFeedback>true</provideFeedback>
+</gazebo>
+
+<gazebo>
+    <plugin name="ft_sensor" filename="libgazebo_ros_ft_sensor.so">
+        <updateRate>50.0</updateRate>
+        <topicName>ft_sensor_topic</topicName>
+        <joint_name>left_wheel_joint</joint_name>
+        <ros>
+            <namespace>/left_wheel</namespace>
+            <remapping>wrench:=torque_feedback</remapping>
+        </ros>
+    </plugin>
+</gazebo>
 
 </robot>

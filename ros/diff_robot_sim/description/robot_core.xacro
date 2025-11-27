@@ -8,7 +8,7 @@
     <xacro:property name="wheel_separation" value="0.70"/>
     
     <xacro:property name="caster_radius" value="0.08"/>
-    <xacro:property name="chassis_mass" value="25.0"/>
+    <xacro:property name="chassis_mass" value="150.0"/>
     
     <xacro:property name="caster_offset_x" value="0.45"/> 
 
