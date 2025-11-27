@@ -17,4 +17,4 @@ WORKDIR /ros_ws
 RUN . /opt/ros/$ROS_DISTRO/setup.sh && \
     colcon build
 
-CMD ["/bin/bash", "-c", "source /ros_ws/install/setup.sh && source /ros_ws/src/arduino_driver/.venv/bin/activate && ros2 run arduino_driver driver.py"]
+CMD ["/bin/bash"]
