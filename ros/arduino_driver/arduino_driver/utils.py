@@ -8,8 +8,8 @@ def robotSpeed2motorSpeed(robot_speed: tuple[float, float], wheel_radius: float,
     return left_wheel_speed, right_wheel_speed
 
 def motorSpeed2pwm(motor_speed: tuple[float, float]) -> tuple[float, float]:
-    left_bridge = 0.4182 * motor_speed[0]
-    right_bridge = 0.4182 * motor_speed[1]
+    left_bridge = 0.4391 * motor_speed[0]
+    right_bridge = 0.4391 * motor_speed[1]
 
     return np.clip(left_bridge, -1, 1), np.clip(right_bridge, -1, 1)
 
